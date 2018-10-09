@@ -27,19 +27,19 @@ var contractGzeEth = contractGzeEthInfo[0];
 console.log("contractGzeEth=" + contractGzeEth + " = " + web3.fromWei(contractGzeEth, "ether"));
 
 var marketAndContractDiff = marketGzeEth.div(contractGzeEth);
-console.log("marketAndContractDiff=" + marketAndContractDiff + " = " + web3.fromWei(marketAndContractDiff, "ether"));
+console.log("marketAndContractDiff=" + marketAndContractDiff);
 
 var rateChangeTolerance = new BigNumber("$RATECHANGETOLERANCE");
 var rateChangeUpperLimit = new BigNumber("1").add(rateChangeTolerance.div(100));
 var rateChangeLowerLimit = new BigNumber("1").div(new BigNumber("1").add(rateChangeTolerance.div(100)));
-console.log("rateChangeUpperLimit=" + rateChangeUpperLimit + " = " + web3.fromWei(rateChangeUpperLimit, "ether"));
-console.log("rateChangeLowerLimit=" + rateChangeLowerLimit + " = " + rateChangeLowerLimit.shift(-18));
+console.log("rateChangeUpperLimit=" + rateChangeUpperLimit);
+console.log("rateChangeLowerLimit=" + rateChangeLowerLimit);
 
 var rateChangeMax = new BigNumber("$RATECHANGEMAX");
 var rateChangeUpperMax = new BigNumber("1").add(rateChangeMax.div(100));
 var rateChangeLowerMax = new BigNumber("1").div(new BigNumber("1").add(rateChangeMax.div(100)));
-console.log("rateChangeUpperMax=" + rateChangeUpperMax + " = " + web3.fromWei(rateChangeUpperMax, "ether"));
-console.log("rateChangeLowerMax=" + rateChangeLowerMax + " = " + rateChangeLowerMax.shift(-18));
+console.log("rateChangeUpperMax=" + rateChangeUpperMax);
+console.log("rateChangeLowerMax=" + rateChangeLowerMax);
 
 if (gasPrice > 0 &&
     marketGzeEth > 0 &&
