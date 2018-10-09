@@ -67,7 +67,8 @@ function generateSummaryJSON() {
     var ts = b.timestamp;
     console.log("JSONSUMMARY:     { \"newRate\": \"" + e.args.newRate.shift(-18) + "\", \"newLive\": \"" + e.args.newLive + "\", " +
       "\"oldRate\": \"" + e.args.oldRate.shift(-18) + "\", \"oldLive\": \"" + e.args.oldLive + "\", " +
-      "\"timestamp\":" + ts + ", \"timestampUTCString\": \"" + new Date(ts * 1000).toUTCString() + "\" }" + separator);
+      "\"timestamp\":" + ts + ", \"timestampString\": \"" + new Date(ts * 1000).toString() + "\", " +
+      "\"timestampUTCString\": \"" + new Date(ts * 1000).toUTCString() + "\" }" + separator);
   }
   console.log("JSONSUMMARY:   ],");
 
